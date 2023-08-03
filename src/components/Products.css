@@ -7,7 +7,7 @@
   
   .products ul {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
   
@@ -77,4 +77,20 @@
 }
 .not-in-cart:hover{
   background-color: #07660e;
+}
+
+@media (min-width: 768px) {
+  .products ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .products ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+  }
 }
