@@ -6,8 +6,9 @@
     right: 0;
     top: 0;
     width: 200px;
-     height: 95%;  /* Elimina o comenta esta línea */
+    height: 95%; /* Elimina o comenta esta línea */
     overflow-y: auto; /* Agrega esta línea */
+    z-index: 9998; /* Asegura que el cajón de carrito esté detrás del botón */
 }
 
 .cart-content {
@@ -45,7 +46,7 @@
     height: 32px;
     justify-content: center;
     padding: 4px;
-    position: absolute;
+    position: fixed;
     right: 8px;
     top: 8px;
     transition: all .3s ease;
@@ -54,10 +55,11 @@
 }
 
 .cart-button:hover {
-    scale: 1.1;
+    transform: scale(1.1); /* Corrige la propiedad "scale" a "transform: scale(...)" */
 }
 
 .cart-button ~ input:checked ~ .cart {
     /* height: 100%; */ /* Elimina o comenta esta línea */
     display: block;
 }
+
